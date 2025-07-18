@@ -1,0 +1,278 @@
+body{
+    user-select: none;
+    background: linear-gradient(blue, black);
+    background-attachment: fixed;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+@font-face {
+    font-family: raleway;
+    src: url(Raleway-Medium.ttf);
+}
+@font-face {
+    font-family: digital;
+    src: url(digital-7\ \(mono\).ttf);
+}
+nav{
+    margin-top: -7.516px;
+    margin-left: -8px;
+    display: flex;
+    cursor: pointer;
+    border: thin solid transparent;
+    padding: 15px 7px;
+    background-color: rgb(175, 170, 170);
+    width: 100%;
+}
+li{
+    list-style: none;
+    font-size: 20px;
+    font-family: raleway;
+    border: thin solid transparent;
+    border-radius: 10px;
+    padding: 15px 25px 10px 20px;
+    height: 30px;
+    margin: auto;
+    color: white;
+    background-color: rgb(49, 43, 43);
+}
+li:hover{
+    opacity: 0.8;
+}
+li:active{
+    background-color: white;
+    color: black;
+    outline-style: solid;
+    outline-color: black;
+}
+svg{
+    margin: auto 6px;
+}
+main{
+    text-align: center;
+}
+#time{
+    border: thin solid transparent;
+    border-radius: 8px;
+    box-shadow: 4px 4px 5px 2px gray;
+    background-color: black;
+    color: white;
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    margin-top: 280px;
+    padding: 13px;
+    font-family: digital;
+    position: relative;
+}
+#larma{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#hour{
+    font-size: 4em;
+    text-align: center;
+    margin: 2px;
+}
+#secs{
+    display: inline;
+    font-size: 30px;
+    text-align: center;
+}
+.colon{
+    color: white;
+    font-size: 4em;
+    font-family: digital;
+    position: absolute;
+    left: 75px;
+    top: -45px;
+    animation-name: colon;
+    animation-duration: 0.95s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes colon {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.9;
+    }
+}
+.calendar{
+    text-align: center;
+    margin: 70px 4px;
+} .calendar svg{margin-top: 5px;}
+#calender{
+    color: white;
+    font-size: 2em;
+    font-family: raleway;
+    display: inline;
+}
+.container{
+    margin: auto;
+    text-align: center;
+    margin-top: 200px;
+}
+#contain{
+    /* position: relative; */
+    text-align: center;
+    margin-top: 250px;
+    /* margin-left: 500px; */
+}
+.container p{
+    font-size: 1.7em;
+    font-weight: 900;
+    font-family: raleway;
+    color: aliceblue;
+}
+input{
+    text-align: center;
+    font-size: 2em;
+    width: 20%;
+}
+.play, .play svg{
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+}
+
+.play:hover{
+   opacity: 0.7;
+} .play:active{
+    opacity: 1;
+}
+#refresh{
+    display: none;
+}
+#showtimer{
+    color: azure;
+    font-size: 4em;
+    font-family: digital;
+    text-align: center;
+    margin: 200px auto;
+}
+#pause{
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+#stopWatch{
+    color: white;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-family: digital;
+    font-size: 4rem;
+}
+#stopWatch-hr{
+    opacity: 0.5;
+}
+#stopWatch-min{
+    opacity: 0.5;
+}
+#stopWatch-sec{
+    opacity: 1;
+}
+#stopWatch-msec{
+    font-size: 2rem;
+    opacity: 1;
+    margin-top: 90px;
+}
+.fluid{
+    text-align: center;
+    margin-top: -100px;
+}
+.fluid h2{
+    color: white;
+    font-family: raleway;
+}
+#alarm{
+    margin: 70px auto;
+    display: block;
+}
+
+ #stop:active,  #stop:hover{
+    outline-style: solid;
+    outline-color: white;
+}
+ #snooze:active,  #snooze:hover{
+    outline-style: solid;
+    outline-color: white;
+}
+ #set:active,  #set:hover{
+    outline-style: solid;
+    outline-color: white;
+}
+#set, #snooze, #stop{
+    color: aliceblue;
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgb(180, 122, 34);
+}
+#stop{
+    background-color: red;
+}
+#el, #demo{
+    font-size: 2em; font-family: Verdana, Geneva, Tahoma, sans-serif; color: azure;
+}
+@media screen and (max-width: 600px) {
+    li{
+        font-size: 10px;
+        padding: 6px;
+        height: 20px;
+        border-radius: 6px;
+    }
+    svg{
+        margin: -1px 4px;
+    }
+    .calendar svg{
+        width: 20px;
+        height: 20px;
+    }
+    #hour, #calender{
+        font-size: 25px;
+    } #secs{
+        font-size: 15px;
+    }
+    #time{
+        margin-top: 120px;
+        height: 30px;
+    }
+    .colon{
+        top: -10px;
+        left: 39px;
+        font-size: 25px;
+    }
+    #larma{
+        width: 14px;
+    }
+    #el{
+        font-size: 15px;
+    }
+    #alarm{
+        font-size: 10px;
+    }
+    .btn{
+        margin: -15px auto;
+    }
+    #set, #snooze, #stop{
+        font-size: 14px;
+        font-weight: 700;
+        padding: 9px;
+    }
+    .fluid{
+        margin-top: 20px;
+    }
+    #contain{
+        margin-top: 25vh;
+    }
+}
